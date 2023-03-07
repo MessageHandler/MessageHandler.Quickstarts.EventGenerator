@@ -6,13 +6,15 @@ MessageHandler is distributed under a commercial license, for more information o
 
 ## What is an event generator
 
-TODO
+An event generator reports changes in state as events towards the rest of the system.
 
-![Reaction](./img/event-generator.jpg)
+![Event generator](./img/event-generator.jpg)
 
 ## When to use it
 
-TODO
+The typical use for event generators is to report state changes, in the real world, as they are picked up by sensors.
+
+But also virtual event generators can be usefull to detect changes in databases, so called change data capture.
 
 ## What you need to get started
 
@@ -35,15 +37,15 @@ In the secrets file you must specify the following configuration values.
 
 TODO
 
-<!-- ## Designed with testing in mind
+## Designed with testing in mind
 
 MessageHandler is intented to be test friendly.
 
-This sample contains plenty of ideas on how to test a reaction without requiring a dependency on an actual broker instance, and thus keep the tests fast.
+This sample contains plenty of ideas on how to test dispatching from an event generator without requiring a dependency on an actual broker instance, and thus keep the tests fast.
 
-- [Component tests](https://github.com/MessageHandler/MessageHandler.Quickstarts.Reaction/tree/master/src/Tests/ComponentTests): To test the reaction logic and it's interaction with the email service.
-- [Contract tests](https://github.com/MessageHandler/MessageHandler.Quickstarts.Reaction/tree/master/src/Tests/ContractTests): To verify that the test doubles used in the component tests are behaving the same as an actual dependency would. Note: contract verification files are often shared between producers and consumers of the contract.
+- [Component tests](https://github.com/MessageHandler/MessageHandler.Quickstarts.EventGenerator/tree/master/src/Tests/ComponentTests): To test the interaction between the event generator and the dispatching infrastructure.
+- [Contract tests](https://github.com/MessageHandler/MessageHandler.Quickstarts.EventGenerator/tree/master/src/Tests/ContractTests): To verify that the test doubles used in the component tests are behaving the same as an actual dependency would. Note: contract verification files are often shared between producers and consumers of the contract.
 
 ## How to implement it yourself
 
-Check out [this how to guide](https://www.messagehandler.net/docs/guides/atomic-processing/configuration/) to learn how to configure a reaction yourself. -->
+Check out [this how to guide](https://www.messagehandler.net/docs/guides/stream-processing/configuration/) to learn how to configure a reaction yourself.
