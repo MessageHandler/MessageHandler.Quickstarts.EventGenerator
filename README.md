@@ -48,4 +48,4 @@ This sample contains plenty of ideas on how to test dispatching from an event ge
 
 ## How to implement it yourself
 
-Check out [this how to guide](https://www.messagehandler.net/docs/guides/stream-processing/configuration/) to learn how to configure a reaction yourself.
+Check out [this how to guide](https://www.messagehandler.net/docs/guides/stream-processing/buffered-dispatching/) to learn how to dispatch messages using the buffered dispatcher.
