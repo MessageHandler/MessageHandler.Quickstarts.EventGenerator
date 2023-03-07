@@ -8,6 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include=".verification\D98204AA-5328-4078-8D66-354286514994\verified.sensorvaluechanged.event.cs.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.11.0" />
     <PackageReference Include="xunit" Version="2.4.1" />
     <PackageReference Include="xunit.runner.visualstudio" Version="2.4.3">
