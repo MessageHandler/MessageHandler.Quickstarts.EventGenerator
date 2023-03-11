@@ -10,12 +10,12 @@ IHost host = Host.CreateDefaultBuilder(args)
         var eventhubsnamespace = hostContext.Configuration.GetValue<string>("eventhubsnamespace")
                                         ?? throw new Exception("No 'eventhubsnamespace' was provided. Use User Secrets or specify via environment variable.");
 
-        services.AddMessageHandler("orderbooking.worker", runtimeConfiguration =>
+        services.AddMessageHandler("eventgenerator", runtimeConfiguration =>
         {
-            runtimeConfiguration.BufferedDispatchingPipeline(options =>
+            runtimeConfiguration.BufferedDispatchingPipeline(dispatching =>
             {
-                options.SerializeMessagesWith(new JSonMessageSerializer());
-                options.RouteMessages(to => to.EventHub("largehub", eventhubsnamespace));
+                dispatching.SerializeMessagesWith(new JSonMessageSerializer());
+                dispatching.RouteMessages(to => to.EventHub("receivehub", eventhubsnamespace));
             });
         });
 

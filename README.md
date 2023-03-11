@@ -35,7 +35,9 @@ In the secrets file you must specify the following configuration values.
 }
 ```
 
-TODO
+Also ensure an event hub named `largehub` is created up front in the eventhubs namespace.
+
+Once configured you can start the worker or run the unittests.
 
 ## Designed with testing in mind
 
