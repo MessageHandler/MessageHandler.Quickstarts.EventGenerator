@@ -16,6 +16,10 @@ The typical use for event generators is to report state changes, in the real wor
 
 But also virtual event generators can be usefull to detect changes in databases, so called change data capture.
 
+## Scenario
+
+In this scenario the event generator measures changes in 'data downloaded' by your WIFI and generates an event to report it.
+
 ## What you need to get started
 
 - The [.NET 6 SDK](https://dotnet.microsoft.com/en-us/download) should be installed

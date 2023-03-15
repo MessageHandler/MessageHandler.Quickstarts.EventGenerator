@@ -4,7 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <UserSecretsId>c28815c2-adbe-4e9a-8456-9fb9987568a8</UserSecretsId>
+    <UserSecretsId>MessageHandler.Quickstarts</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
