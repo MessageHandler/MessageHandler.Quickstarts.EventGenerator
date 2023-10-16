@@ -1,6 +1,7 @@
 using Worker;
 using MessageHandler.Runtime;
 using MessageHandler.Runtime.StreamProcessing;
+using Contract;
 
 IHost host = Host.CreateDefaultBuilder(args)
     .ConfigureServices((hostContext, services) =>
@@ -14,7 +15,7 @@ IHost host = Host.CreateDefaultBuilder(args)
         {
             runtimeConfiguration.BufferedDispatchingPipeline(dispatching =>
             {
-                dispatching.SerializeMessagesWith(new JSonMessageSerializer());
+                dispatching.SerializeMessagesWith(new JsonTypeMessageSerializer(typeof(SensorValueChanged)));
                 dispatching.RouteMessages(to => to.EventHub("receivehub", eventhubsnamespace));
             });
         });

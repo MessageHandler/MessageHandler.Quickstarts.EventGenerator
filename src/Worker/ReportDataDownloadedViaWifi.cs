@@ -1,7 +1,6 @@
 ﻿using Contract;
 using LibreHardwareMonitor.Hardware;
 using MessageHandler.Runtime.StreamProcessing;
-using System.Text.Json;
 
 namespace Worker
 {
